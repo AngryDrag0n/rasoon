@@ -1,0 +1,175 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: none;
+    box-sizing: border-box;
+    font-family: Verdana;
+}
+
+body {
+    padding: 0;
+    display: flex;
+    margin: 0px;
+    flex: 1 1 100vw;
+    flex-wrap: wrap;
+    background-image:linear-gradient(yellow, rgb(255, 217, 0));
+}
+
+
+
+header,main,nav,footer {
+    display: flex;
+    margin: 0px;
+    background: #afafaf;
+    
+}
+
+#main{
+    margin: 0%;
+    background:rgba(255, 254, 254, 0.932);
+}
+
+aside {
+    background-color: rgb(46, 46, 46);
+    text-decoration: none;
+    color: inherit;
+    font-size: 15pt;
+    align-items: right;
+}
+
+h2 {
+    font-size: 30px;
+    text-align:center;
+    padding: 10px;
+}
+
+#apresentação {
+    text-align: justify;
+    text-justify: inter-word;
+    padding: 15px;
+}
+
+#venhaConosco{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: yellow;
+    text-align: justify;
+    text-justify: inter-word;
+    padding: 15px;
+}
+
+header {
+    height: 100px;
+    flex: 1 1 100vw;
+    background-color: rgb(37, 37, 37);
+}
+
+span{
+    color: yellow;
+}
+
+nav{
+    flex: 1 1 200px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(34, 34, 34, 0.068);
+}
+
+nav a{
+    background-color: yellow;
+    color: yellow;
+    padding: 5px;
+    border: 5px solid yellow;
+    margin: 15%;
+    text-decoration: none;
+    font-size: 15pt;
+}
+
+main {
+    height: calc(100vh - 224px);
+    flex: 20 1 500px;
+    flex-wrap: wrap;
+    overflow: auto;
+    margin: 5px;
+    margin-bottom: 0%;
+}
+
+aside {
+    flex: 1 1 200px;
+    
+}
+
+footer {
+    text-align: center;
+    color: #ddd;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    align-items: center;
+    flex: 1 1 100vw;
+    background-color: rgb(37, 37, 37);
+}
+
+@media only screen and (max-width: 717px) {
+
+    header{
+        order:0;
+    }
+
+    main{
+        height: calc(100vh - 330px);
+        order:1;
+    }
+
+    aside{
+        flex: 1 1 100vh;
+        height: 100px;
+        order: 2;
+    }
+
+    footer{
+        order: 3;
+    }
+}
+
+#OpenMenu, #CloseMenu {
+    border: none;
+    background: none;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0px 5px 0px 5px;
+    cursor: pointer;
+    display: none;
+}
+
+@media only screen and (max-width: 717px) {
+    #OpenMenu, #CloseMenu {
+        display: block;
+    }
+
+    #OpenMenu {
+        margin-left: auto;
+    }
+
+    #CloseMenu {
+        position: fixed;
+        right: 15px;
+        top: 15px;
+    }
+
+    nav {
+        position: fixed;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(201, 206, 201, 0.9);
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        display: none;
+        opacity: 0;
+        transition: 0.3s;
+    }
+}
