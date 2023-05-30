@@ -168,7 +168,7 @@ body {
     color: #fff;
 }
 
-@media screen and (max-width: 1330px) {
+/*@media screen and (max-width: 1330px) {
     .form-image {
         display: none;
     }
@@ -178,7 +178,7 @@ body {
     .form {
         width: 100%;
     }
-}
+}*/
 
 @media screen and (max-width: 1064px) {
     .container {
