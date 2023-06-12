@@ -5,6 +5,11 @@
     font-family: 'Inter', sans-serif;
 }
 
+header{
+    position: fixed;
+    top: 2%;
+}
+
 body {
     width: 100%;
     height: 100vh;
@@ -12,26 +17,6 @@ body {
     justify-content: center;
     align-items: center;
     background-image:linear-gradient(yellow, rgb(255, 217, 0));
-}
-
-.container {
-    width: 80%;
-    height: 80vh;
-    display: flex;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
-}
-
-.form-image {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fde3a7d7;
-    padding: 1rem;
-}
-
-.form-image img {
-    width: 31rem;
 }
 
 .form {
