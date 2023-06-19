@@ -8,6 +8,8 @@
 }
 
 header{
+    height: 100px;
+    flex: 1 1 100vw;
     align-items: center;
     justify-content: center;
 }
@@ -24,42 +26,6 @@ header,main,nav,footer {
     display: flex;
     margin: 0px;
     
-}
-
-
-aside {
-    background-color: rgb(46, 46, 46);
-    text-decoration: none;
-    color: inherit;
-    font-size: 15pt;
-    align-items: right;
-}
-
-h2 {
-    font-size: 30px;
-    text-align:center;
-    padding: 10px;
-}
-
-#apresentação {
-    text-align: justify;
-    text-justify: inter-word;
-    padding: 15px;
-}
-
-#venhaConosco{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: yellow;
-    text-align: justify;
-    text-justify: inter-word;
-    padding: 15px;
-}
-
-header {
-    height: 100px;
-    flex: 1 1 100vw;
 }
 
 span{

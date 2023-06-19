@@ -1,73 +1,92 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- or -->
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>RasOOn</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="icon" type="image/x-icon" href="img/coruja.png">
 </head>
 <body>
 
-    <header>
-        <a href="index.html" id="logo"><img src="img/rasoonLOGO.png" style="width:100px;height:100px;"/></a>
-
-        <button id="OpenMenu">&#9776;</button>
+    <header>                     <!--<i src="img/coruja.png"> ></i>-->
+        <a href="#" class="logo"><i class='bx bx-book-open'></i>Rass<span>OO</span>n</a>
 
         <nav id="menu">
-            <button id="CloseMenu">X</button>
-            <a href="#"><img src="img/lupa.png" style="width:40px;height: 40px;"></a>
-            <a href="#"><img src="img/carrinho.png" style="width:40px;height: 40px;"></a>
-            <a href="perfil/perfil.html"><img src="img/perfil.png" style="width:50px;height: 50px;"></a>
+        <button id="closeMenu">X</button>
+            <ul class="navegação">
+                <li><a href="#">Buscar</a></li>
+                <li><a href="#">Visão geral</a></li>
+                <li><a href="#">Reviews</a></li>
+                <li><a href="#">Contate-nos</a></li>
+            </ul><!--navegação-->
         </nav>
-    </header>   
 
-    <main id="main">
-        <section">
-        <h2>
-            Ras<span>OOn</span>
-        </h2>
-        <p id="apresentação">
-            RasOOn é um site de leitura de livros, artigos e roteiros em que os usuários podem realizar avaliações sobre os conteúdos consumidos e recomendar os melhores lugares para comprá-los, sem contar a aba “Clube do Livro”, em que os usuários podem realizar realizar resenhas com pessoas com gostos parecidos e interagir sobre os livros que leem.<br>
-        </p>
-        <a href="login/login.html"><button id="venhaConosco">Venha Conosco!!</button></a>
-        </section>
-        </main>
-    <footer>
-        <ul>
-            <p>sobre</p>
-            <p>+55 (12) 3456-78910</p>
-            <p>Exemplo@gmail.com</p>
-            <p>Reclame Aqui</p>
-        </ul>      
-    </footer>
+        <div class="header-icons">
+            <i class='bx bx-cart'></i>
+            <div id="openMenu"></div>
+            <i class='bx bx-menu'></i>
+        </div><!--header-icons-->
+    </header>
 
-    <script type="text/javascript">
+    <section class="home">
+        <div class="home-img">
+            <img src="img/product1.png" class="one">
+        </div><!--home-img-->
 
-        OpenMenu.addEventListener('click', () => {
+        <div class="home-text">
+
+            <h1>Campeão <br> Coruja!</h1>
+            <h5>A melhor classificação de sua categoria!</h5>
+            <h3>1° Lugar!</h3>
+            <a href="#" class="btn">Confira o placar</a>
+            
+        </div><!--home-text-->
+    </section><!--home-->
+
+    <div class="main">
+        <div class="row">
+            <li><img src="img/main1.png" onclick="slider('img/product1')"></li>
+        </div><!--row-->
+
+        <div class="row2">
+            <li><img src="img/main2.png" onclick="slider('img/product2.png')"></li>
+        </div><!--row2-->
+
+        <div class="row3">
+            <li><img src="img/main3.png" onclick="slider('img/product3.png')"></li>
+        </div><!--row3-->
+    </div><!--main-->
+
+    <script>
+        openMenu.addEventListener('click', () => {
             menu.style.display = 'flex'
-
-            menu.style.right = (menu.offsetWidth * -1) + 'px'
-
-            OpenMenu.style.display = 'none'
-
-            setTimeout(() => {
-                menu.style.opacity = '1'
-
-                menu.style.right = '0'
-            }, 10)
         })
 
-        CloseMenu.addEventListener('click', () => {
-            setTimeout(() => {
-                menu.removeAttribute('style')
-                OpenMenu.removeAttribute('style')
-            }, 200)
-            menu.style.opacity = '0'
-            menu.style.right = (menu.offsetWidth * -1) + 'px'
+        closeMenu.addEventListener('click', () => {
+            menu.removeAttribute('style')
         })
+
+        function slider (anything){
+            document.querySelector ('.one') .src = anything;
+        };
+
+       let menu = document.querySelector ('#menu-icon');
+       let navbar = document.querySelector ('.navbar');
+
+       menu.onclick = () => {
+        menu.classList.toggle ('bx-x');
+        navbar.classList.toggle ('open');
+       }
     </script>
-
+    
 </body>
 </html>
