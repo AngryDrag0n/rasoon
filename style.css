@@ -18,6 +18,8 @@
 
 
 body{
+    justify-content: center;
+    align-items: center;
     background-color: rgb(27, 27, 27) ;
     color: var(--tex-color);
 }
@@ -83,7 +85,6 @@ img {
 
 .header-icons{
     display: flex;
-    align-items: center;
 }
 
 #closeMenu{
@@ -247,6 +248,12 @@ img {
     transform: translateY(-8px);
 }
 
+#footer_copyright{
+    background-color: #111111;
+    display: flex;
+    justify-content: center;
+}
+
 @media only screen  and (max-width:930px) {
     #openMenu, #closeMenu{
         display: block;
@@ -269,7 +276,7 @@ img {
         margin-left: 15px;
     }
     .home-text h1 {
-        font-size: 1.5rem;
+        font-size: 3rem;
     }
     .main {
         bottom: 0;
